@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
@@ -135,6 +136,27 @@ namespace VLL.Schedule.Tests {
                 firstTest.GetNext(dt);
             }
           
+        }
+
+        [TestMethod]
+        public void EverySecondTuesdayOfTheMonth() {
+            //Run for the whole date range for every week of the month for all days of the week.
+
+            var everySecondTuesday = new MonthlyOccurrence(DateTime.MinValue, DateTime.MaxValue
+                    , EVERY_MONTH_OF_THE_YEAR
+                    , new WeekOfMonth[] { WeekOfMonth.Second }
+                    , new DayOfWeek[] { DayOfWeek.Tuesday});
+
+            visualiseOccurrencesInRange(everySecondTuesday, today.AddDays(-today.DayOfYear), today.AddDays(365 - today.DayOfYear));
+
+            foreach (var dt in AOccurrence.DateRange(DateTime.MinValue, DateTime.MaxValue)) {
+                var result = everySecondTuesday.GetNext(dt);
+                if (result.HasValue) {
+                    Assert.AreEqual(DayOfWeek.Tuesday, result.Value.DayOfWeek, $"Got result of {result} which is a {result.Value.DayOfWeek}");
+                } 
+                //This test is inconclusive as it does not test the nulls
+            }
+
         }
 
 
