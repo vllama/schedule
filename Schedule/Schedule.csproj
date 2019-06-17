@@ -3,6 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>VLL.Schedule</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <NeutralLanguage />
+    <PackageProjectUrl>https://github.com/vllama/schedule</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/vllama/schedule.git</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <Copyright>Copyright (c) 2019 vllama</Copyright>
+    <PackageLicenseUrl>https://github.com/vllama/schedule/blob/master/LICENSE</PackageLicenseUrl>
+    <Company>vllama</Company>
+    <Authors>Vlad</Authors>
   </PropertyGroup>
 
 </Project>
