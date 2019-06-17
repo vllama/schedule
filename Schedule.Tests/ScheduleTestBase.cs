@@ -54,7 +54,7 @@ namespace VLL.Schedule.Tests {
             Trace.Write("|");
 
             foreach (var sd in AOccurrence.DateRange(start.Value, end.Value)) {
-                Trace.Write(String.Format("     {0,4:d} |", (sd - now).Days + 1));
+                Trace.Write(String.Format("    {0,5:d} |", (sd - now).Days + 1));
             }
 
             Trace.Write("\n|");
