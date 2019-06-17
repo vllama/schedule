@@ -7,7 +7,7 @@ namespace VLL.Schedule.Extensions {
 
         /// <summary>
         /// Return which Day of the month the date represents. For example :
-        ///         July 17'th 2016 is the 3'rd Sunday of July 2016, therefore we would return DayOfMonth.Third (0 based index)
+        ///         July 17'th 2016 is the 3'rd Sunday of July 2016, therefore we would return WeekOfMonth.Third (0 based index)
         /// </summary>
         /// <param name="date">The day of the month</param>
         /// <returns>Returns 0 first, 1, 2,3,4 or 5 (last) occurrence of the day of the week in the month</returns>

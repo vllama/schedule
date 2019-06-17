@@ -130,7 +130,7 @@ namespace VLL.Schedule {
                         var ordinal = DateToTest.GetOrdinalInMonth();
 
                         //todo.. bug here.. is contains the right thing?
-                        //_weekDayOfMonth is assumed to be sorted.  Does contains find the first one??? TODO:test
+                        //_weekWeekOfMonth is assumed to be sorted.  Does contains find the first one??? TODO:test
                         if (_weekOfMonth.Contains(ordinal)){
                             return DateToTest;
                         }
