@@ -16,7 +16,7 @@ Scheduling resolution options are with the lowest being Day.:
             var end = new DateTime(2018, 8, 13);
             var days = new[] { DayOfWeek.Sunday, DayOfWeek.Saturday };
             var weekendDays = new WeeklyOccurrence(start, end, days, 2);
-'''
+```
 Visualize the output:
 ```text
  Range from 2018-12-31 12:00:00 AM to 2019-12-31 12:00:00 AM 
